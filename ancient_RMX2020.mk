@@ -22,12 +22,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/RMX2020/device.mk)
 
 # Inherit some common xd stuff.
-$(call inherit-product, vendor/xdroid/config/common.mk)
-XDROID_BOOT := 720
-XDROID_MAINTAINER := Arthurleywin
+$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
+ANCIENT_OFFICIAL := true
+ANCIENT_GAPPS := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := xdroid_RMX2020
+PRODUCT_NAME := ancient_RMX2020
 PRODUCT_DEVICE := RMX2020
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := realme Monet
